@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
 @interface BBSpeak : NSObject
 
 //单例
 + (BBSpeak *)sharedManager;
+
+//获取音乐播放器，进行设置，或者监听属性等
+- (AVAudioPlayer *)audioPlayer;
 
 //播放一段文本
 - (void)speakString:(NSString *)words;

@@ -7,7 +7,6 @@
 //
 
 #import "BBSpeak.h"
-#import <AVFoundation/AVFoundation.h>
 
 @interface BBSpeak()<AVSpeechSynthesizerDelegate>
 @property(nonatomic, strong) AVSpeechSynthesizer *speech;
@@ -38,6 +37,11 @@
         self.speech.delegate = self;
     }
     return self;
+}
+
+//获取音乐播放器，进行设置
+- (AVAudioPlayer *)audioPlayer{
+    return self.audio_player;
 }
 
 //播放一段文本
